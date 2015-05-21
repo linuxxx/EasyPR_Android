@@ -21,27 +21,31 @@ public class MainActivity extends Activity {
 	private ImageView imageView = null;
 	private Bitmap bmp = null;
 	private TextView m_text = null;
-	private String path = null; // SDCARD 根目录
-
+	private String path = null;
+	
+	static {
+	    if (!OpenCVLoader.initDebug()) {
+	    } else {
+	        System.loadLibrary("imageproc");
+	    }
+	}
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		imageView = (ImageView) findViewById(R.id.image_view);
 		m_text = (TextView) findViewById(R.id.myshow);
-		// 将汽车完整图像加载程序中并进行显示
 		bmp = BitmapFactory.decodeResource(getResources(), R.drawable.plate_locate);
 		imageView.setImageBitmap(bmp);
-		path = Environment.getExternalStorageDirectory().getAbsolutePath();// 获取跟目录
+		path = Environment.getExternalStorageDirectory().getAbsolutePath();
 	}
 
-	// OpenCV类库加载并初始化成功后的回调函数，在此我们不进行任何操作
 	private BaseLoaderCallback mLoaderCallback = new BaseLoaderCallback(this) {
 		@Override
 		public void onManagerConnected(int status) {
 			switch (status) {
 			case LoaderCallbackInterface.SUCCESS: {
-				System.loadLibrary("imageproc");
 			}
 				break;
 			default: {
@@ -66,9 +70,6 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onResume() {
 		super.onResume();
-		// 通过OpenCV引擎服务加载并初始化OpenCV类库，所谓OpenCV引擎服务即是
-		// OpenCV_2.4.3.2_Manager_2.4_*.apk程序包，存在于OpenCV安装包的apk目录中
-		OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_2_4_9, this,
-				mLoaderCallback);
+		mLoaderCallback.onManagerConnected(LoaderCallbackInterface.SUCCESS);
 	}
 }
