@@ -20,8 +20,6 @@ cmd 到jni目录，执行ndk-build
 * 导入libs
 把OpenCV-2.4.2-android-sdk/sdk/native/libs/下的文件复制到libs/
 
-#其他
-有任何问题请发issues，或者联系我unix_x@qq.com | QQ:415435551  :)
 
 
 
