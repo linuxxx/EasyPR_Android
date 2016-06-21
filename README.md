@@ -1,24 +1,14 @@
 # EasyPR_Android
-EasyPR_Android本是EasyPR的android移植版本，参考了taotao1233的那个android移植，在此一并感谢。
+本程序基于对Fork代码的学习，结合新版的EasyPR1.4和OpenCV3.1.0进行移植。
+开发环境为Android Studio.
 
-#注意MainActivity下
-		String svmpath = path+"/svm.xml";
-		String annpath = path+"/ann.xml";
-		String imgpath = path+"/plate_locate.jpg";
-将项目jni/model 下的svm.xml和ann.xml和测试图片plate_locate.jpg导入你手机的SD卡根目录。我这里用DDMS导入文件。
+#说明
+1. 程序直接集成了OpencvNative 3.1.0库，无需下载OpenCV。
+2. 本程序直接将模型文件放置在res/raw目录下，在运行时自行拷贝到手机文件中，无需模型文件的手动放置。
+3. 本程序运行时，有车牌限定框，APP会在框的范围内进行图像裁剪，人为缩小了识别范围，提高识别度。但是，这与算法的优劣无关。研究人员，还是用全图进行识别才能体验算法优劣。
 
-#使用步骤
-* 下载并导入OpenCV-2.4.10-android-sdk项目到eclipse，设置为is Library
-* 导入EasyPR_Android该项目，添加引用
-右键properties-> Android-> library-> add OpenCV-2.4.10-android-sdk
-* 修改jni/android.mk
-把里面的路径替换成你本机的路径：include D:/OpenCV-2.4.10-android-sdk/OpenCV-2.4.10-android-sdk/sdk/native/jni/OpenCV.mk
-
-* 重新编译
-cmd 到jni目录，执行ndk-build
-
-* 导入libs
-把OpenCV-2.4.2-android-sdk/sdk/native/libs/下的文件复制到libs/
+#鸣谢
+感谢贡献EasyPR和EasyPR_Android的开发者，我也是站着他们的肩膀上继续前行，谢谢。
 
 
 
