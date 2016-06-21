@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.aiseminar.platerecognizer.ui.CameraActivity">
+
+    <SurfaceView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/svCamera"
+        android:layout_gravity="center" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivCapturePhoto"
+        android:layout_gravity="center_horizontal|bottom"
+        android:src="@drawable/capture_photo"
+        android:layout_marginBottom="20dp"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp">
+
+        <ImageView
+            android:layout_width="136dp"
+            android:layout_height="48dp"
+            android:id="@+id/ivPlateRect"
+            android:layout_gravity="center"
+            android:src="@drawable/plate_rect"
+            android:contentDescription="@string/plate_rect" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="拍照识别车牌"
+            android:id="@+id/tvPlateResult"
+            android:layout_gravity="center"
+            android:textColor="@android:color/holo_red_light"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</FrameLayout>
