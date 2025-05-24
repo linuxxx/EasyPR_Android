@@ -9,9 +9,3 @@
 
 #鸣谢
 感谢贡献EasyPR和EasyPR_Android的开发者，我也是站着他们的肩膀上继续前行，谢谢。
-
-###  鸣谢
-### VTEXS
-
-[VTEXS](https://vtexs.com/) is a provider of high-performance cloud infrastructure and VPS hosting services, emphasizing guaranteed resources, 24/7 expert support, and a 99.99% uptime SLA. They support open-source projects by offering hosting resources,  to approved contributors.
-
