@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/49920671-0de2-471f-ab47-0b1b671e8d12)# EasyPR_Android
+# EasyPR_Android
 本程序基于对Fork代码的学习，结合新版的EasyPR1.4和OpenCV3.1.0进行移植。
 开发环境为Android Studio.
 
