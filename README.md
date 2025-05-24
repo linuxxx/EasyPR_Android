@@ -1,4 +1,4 @@
-# EasyPR_Android
+![image](https://github.com/user-attachments/assets/49920671-0de2-471f-ab47-0b1b671e8d12)# EasyPR_Android
 本程序基于对Fork代码的学习，结合新版的EasyPR1.4和OpenCV3.1.0进行移植。
 开发环境为Android Studio.
 
@@ -10,6 +10,8 @@
 #鸣谢
 感谢贡献EasyPR和EasyPR_Android的开发者，我也是站着他们的肩膀上继续前行，谢谢。
 
+###  鸣谢
+### VTEXS
 
-
+[VTEXS](https://vtexs.com/) is a provider of high-performance cloud infrastructure and VPS hosting services, emphasizing guaranteed resources, 24/7 expert support, and a 99.99% uptime SLA. They support open-source projects by offering hosting resources,  to approved contributors.
 
